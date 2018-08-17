@@ -1,0 +1,8 @@
+ros-indigo-planning-msgs (3.3.0-0trusty) trusty; urgency=high
+
+  * 2D polygon messages and services.
+  * Contributors: Rik Bähnemann
+
+ -- Helen Oleynikova <helen.oleynikova@mavt.ethz.ch>  Thu, 16 Aug 2018 22:00:00 -0000
+
+
