@@ -9,7 +9,11 @@ include_directories(${Eigen_INCLUDE_DIRS})
 
 add_message_files(
   FILES
+  Point2D.msg
   PointCloudWithPose.msg
+  Polygon2D.msg
+  PolygonWithHoles.msg
+  PolygonWithHolesStamped.msg
   PolynomialSegment4D.msg
   PolynomialTrajectory4D.msg
 )
@@ -17,6 +21,7 @@ add_message_files(
 add_service_files(
   FILES
   PlannerService.srv
+  PolygonService.srv
 )
 
 generate_messages(
