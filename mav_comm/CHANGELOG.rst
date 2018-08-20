@@ -1,9 +1,10 @@
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 Changelog for package mav_comm
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-3.2.0 (2017-03-02)
+3.3.0 (2018-08-17)
 ------------------
-* See mav_msgs changelog for details.
+* More utilities and lower level UAV kinematics, see mav_msgs changelog for details.
+* 2D polygon planning msgs, see planings_msgs changelog for details.
 
 3.1.0 (2016-12-01)
 ------------------
