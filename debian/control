@@ -1,0 +1,12 @@
+Source: ros-kinetic-mav-planning-msgs
+Section: misc
+Priority: extra
+Maintainer: Helen Oleynikova <helen.oleynikova@mavt.ethz.ch>
+Build-Depends: debhelper (>= 9.0.0), ros-kinetic-catkin, ros-kinetic-geometry-msgs, ros-kinetic-mav-msgs, ros-kinetic-message-generation, ros-kinetic-message-runtime, ros-kinetic-sensor-msgs, ros-kinetic-trajectory-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-kinetic-mav-planning-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-kinetic-geometry-msgs, ros-kinetic-mav-msgs, ros-kinetic-message-generation, ros-kinetic-message-runtime, ros-kinetic-sensor-msgs, ros-kinetic-trajectory-msgs
+Description: Messages specific to MAV planning, especially polynomial planning.
