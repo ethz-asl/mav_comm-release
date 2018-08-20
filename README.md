@@ -1,3 +1,29 @@
+## mav_comm (lunar) - 3.3.0-1
+
+The packages in the `mav_comm` repository were released into the `lunar` distro by running `/usr/bin/bloom-release mav_comm --track lunar --rosdistro lunar --edit-track` on `Mon, 20 Aug 2018 20:27:50 -0000`
+
+These packages were released:
+- `mav_comm`
+- `mav_msgs`
+- `mav_planning_msgs`
+
+Version of package(s) in repository `mav_comm`:
+
+- upstream repository: https://github.com/ethz-asl/mav_comm.git
+- release repository: unknown
+- rosdistro version: `null`
+- old version: `3.3.0-0`
+- new version: `3.3.0-1`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## mav_comm (melodic) - 3.3.0-1
 
 The packages in the `mav_comm` repository were released into the `melodic` distro by running `/usr/bin/bloom-release mav_comm --track melodic --rosdistro melodic --edit-track` on `Mon, 20 Aug 2018 20:22:38 -0000`
