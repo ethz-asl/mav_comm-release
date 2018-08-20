@@ -1,6 +1,6 @@
 <package>
   <name>mav_comm</name>
-  <version>3.3.0</version>
+  <version>3.2.0</version>
   <description>Contains messages and services for MAV communication</description>
 
   <maintainer email="fadri.furrer@mavt.ethz.ch">Fadri Furrer</maintainer>
@@ -13,8 +13,6 @@
   <author>Fadri Furrer</author>
   <author>Helen Oleynikova</author>
   <author>Mina Kamel</author>
-  <author>Karen Bodie</author>
-  <author>Rik Bähnemann</author>
 
   <license>ASL 2.0</license>
 
@@ -26,7 +24,6 @@
 
   <!-- Dependencies needed after this package is compiled. -->
   <run_depend>mav_msgs</run_depend>
-  <run_depend>mav_planning_msgs</run_depend>
 
   <export>
     <metapackage/>

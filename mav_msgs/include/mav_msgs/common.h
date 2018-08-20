@@ -23,19 +23,18 @@
 #ifndef MAV_MSGS_COMMON_H
 #define MAV_MSGS_COMMON_H
 
+#include <Eigen/Geometry>
 #include <geometry_msgs/Point.h>
 #include <geometry_msgs/Quaternion.h>
 #include <geometry_msgs/Vector3.h>
-#include <Eigen/Geometry>
 
 namespace mav_msgs {
-
-const double kNumNanosecondsPerSecond = 1.e9;
 
 /// Magnitude of Earth's gravitational field at specific height [m] and latitude
 /// [rad] (from wikipedia).
 inline double MagnitudeOfGravity(const double height,
                                  const double latitude_radians) {
+
   // gravity calculation constants
   const double kGravity_0 = 9.780327;
   const double kGravity_a = 0.0053024;
@@ -46,8 +45,8 @@ inline double MagnitudeOfGravity(const double height,
   double sin_squared_twice_latitude =
       sin(2 * latitude_radians) * sin(2 * latitude_radians);
   return kGravity_0 * ((1 + kGravity_a * sin_squared_latitude -
-                        kGravity_b * sin_squared_twice_latitude) -
-                       kGravity_c * height);
+                      kGravity_b * sin_squared_twice_latitude) -
+                      kGravity_c * height);
 }
 
 inline Eigen::Vector3d vector3FromMsg(const geometry_msgs::Vector3& msg) {
@@ -142,53 +141,16 @@ inline void getEulerAnglesFromQuaternion(const Eigen::Quaternion<double>& q,
   }
 }
 
-// Calculate the nominal rotor rates given the MAV mass, allocation matrix,
-// angular velocity, angular acceleration, and body acceleration (normalized
-// thrust).
-//
-// [torques, thrust]' = A * n^2, where
-// torques = J * ang_acc + ang_vel x J
-// thrust = m * norm(acc)
-//
-// The allocation matrix A has of a hexacopter is:
-// A = K * B, where
-// K = diag(l*c_T, l*c_T, c_M, c_T),
-//     [ s  1  s -s -1 -s]
-// B = [-c  0  c  c  0 -c]
-//     [-1  1 -1  1 -1  1]
-//     [ 1  1  1  1  1  1],
-// l: arm length
-// c_T: thrust constant
-// c_M: moment constant
-// s: sin(30°)
-// c: cos(30°)
-//
-// The inverse can be computed computationally efficient:
-// A^-1 \approx B^pseudo * K^-1
-inline void getSquaredRotorSpeedsFromAllocationAndState(
-    const Eigen::MatrixXd& allocation_inv, const Eigen::Vector3d& inertia,
-    double mass, const Eigen::Vector3d& angular_velocity_B,
-    const Eigen::Vector3d& angular_acceleration_B,
-    const Eigen::Vector3d& acceleration_B,
-    Eigen::VectorXd* rotor_rates_squared) {
-  const Eigen::Vector3d torque =
-      inertia.asDiagonal() * angular_acceleration_B +
-      angular_velocity_B.cross(inertia.asDiagonal() * angular_velocity_B);
-  const double thrust_force = mass * acceleration_B.norm();
-  Eigen::Vector4d input;
-  input << torque, thrust_force;
-  *rotor_rates_squared = allocation_inv * input;
-}
+inline double getShortestYawDistance(double yaw1, double yaw2) {
+  // From burrimi's implementation in mav_flight_manager/devel/iros2015.
+  double yaw_mod = std::fmod(yaw1 - yaw2, 2 * M_PI);
+  if (yaw_mod < -M_PI) {
+    yaw_mod += 2 * M_PI;
+  } else if (yaw_mod > M_PI) {
+    yaw_mod -= 2 * M_PI;
+  }
 
-inline double nanosecondsToSeconds(int64_t nanoseconds) {
-  double seconds = nanoseconds / kNumNanosecondsPerSecond;
-  return seconds;
-}
-
-inline int64_t secondsToNanoseconds(double seconds) {
-  int64_t nanoseconds =
-      static_cast<int64_t>(seconds * kNumNanosecondsPerSecond);
-  return nanoseconds;
+  return yaw_mod;
 }
 
 }  // namespace mav_msgs
