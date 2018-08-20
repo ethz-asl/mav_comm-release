@@ -70,7 +70,7 @@ tracks:
     ros_distro: kinetic
     vcs_type: git
     vcs_uri: https://github.com/ethz-asl/mav_comm.git
-    version: 3.2.0
+    version: 3.3.0
   lunar:
     actions:
     - bloom-export-upstream :{vcs_local_uri} :{vcs_type} --tag :{release_tag} --display-uri
