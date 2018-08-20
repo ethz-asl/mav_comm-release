@@ -1,0 +1,12 @@
+Source: ros-melodic-mav-planning-msgs
+Section: misc
+Priority: extra
+Maintainer: Helen Oleynikova <helen.oleynikova@mavt.ethz.ch>
+Build-Depends: debhelper (>= 9.0.0), ros-melodic-catkin, ros-melodic-geometry-msgs, ros-melodic-mav-msgs, ros-melodic-message-generation, ros-melodic-message-runtime, ros-melodic-sensor-msgs, ros-melodic-trajectory-msgs
+Homepage: 
+Standards-Version: 3.9.2
+
+Package: ros-melodic-mav-planning-msgs
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-melodic-geometry-msgs, ros-melodic-mav-msgs, ros-melodic-message-generation, ros-melodic-message-runtime, ros-melodic-sensor-msgs, ros-melodic-trajectory-msgs
+Description: Messages specific to MAV planning, especially polynomial planning.
