@@ -1,0 +1,26 @@
+ros-kinetic-mav-comm (3.3.0-1xenial) xenial; urgency=high
+
+  * More utilities and lower level UAV kinematics, see mav_msgs changelog for details.
+  * 2D polygon planning msgs, see planings_msgs changelog for details.
+
+ -- Fadri Furrer <fadri.furrer@mavt.ethz.ch>  Thu, 16 Aug 2018 22:00:00 -0000
+
+ros-kinetic-mav-comm (3.1.0-1xenial) xenial; urgency=high
+
+  * More helper functions, see mav_msgs changelog for details.
+
+ -- Fadri Furrer <fadri.furrer@mavt.ethz.ch>  Wed, 30 Nov 2016 23:00:00 -0000
+
+ros-kinetic-mav-comm (3.0.0-1xenial) xenial; urgency=high
+
+  * Changed API for mav_msgs, see mav_msgs changelog for details.
+
+ -- Fadri Furrer <fadri.furrer@mavt.ethz.ch>  Sat, 08 Aug 2015 22:00:00 -0000
+
+ros-kinetic-mav-comm (2.0.3-1xenial) xenial; urgency=high
+
+
+
+ -- Fadri Furrer <fadri.furrer@mavt.ethz.ch>  Thu, 21 May 2015 22:00:00 -0000
+
+
