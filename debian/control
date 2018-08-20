@@ -1,0 +1,12 @@
+Source: ros-lunar-mav-comm
+Section: misc
+Priority: extra
+Maintainer: Fadri Furrer <fadri.furrer@mavt.ethz.ch>
+Build-Depends: debhelper (>= 9.0.0), ros-lunar-catkin
+Homepage: https://github.com/ethz-asl/mav_comm
+Standards-Version: 3.9.2
+
+Package: ros-lunar-mav-comm
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, ros-lunar-mav-msgs, ros-lunar-mav-planning-msgs
+Description: Contains messages and services for MAV communication
