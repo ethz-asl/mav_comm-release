@@ -108,7 +108,7 @@ tracks:
       -i :{release_inc} --os-name debian --os-not-required
     - git-bloom-generate -y rosrpm --prefix release/:{ros_distro} :{ros_distro} -i
       :{release_inc}
-    devel_branch: null
+    devel_branch: devel
     last_version: 3.3.0
     name: upstream
     patches: null
@@ -118,4 +118,4 @@ tracks:
     ros_distro: melodic
     vcs_type: git
     vcs_uri: https://github.com/ethz-asl/mav_comm.git
-    version: 3.3.0
+    version: :{auto}
