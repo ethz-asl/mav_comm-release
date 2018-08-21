@@ -1,0 +1,18 @@
+ros-kinetic-mav-planning-msgs (3.3.1-0xenial) xenial; urgency=high
+
+  * Fix Eigen3 warning. Migration from Jade.
+  * Add std_msgs, eigen and cmake_modules dependencies.
+
+ -- Helen Oleynikova <helen.oleynikova@mavt.ethz.ch>  Mon, 20 Aug 2018 22:00:00 -0000
+
+ros-kinetic-mav-planning-msgs (3.3.0-0xenial) xenial; urgency=high
+
+  * Add 2D polygon messages and services.
+  * Add ROS and Eigen conversions.
+  * Add standard services and trajectory messages.
+  * Add mav_planning_msgs
+  * Contributors: Helen Oleynikova, Rik Bähnemann
+
+ -- Helen Oleynikova <helen.oleynikova@mavt.ethz.ch>  Thu, 16 Aug 2018 22:00:00 -0000
+
+
