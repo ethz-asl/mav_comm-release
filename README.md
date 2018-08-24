@@ -1,3 +1,29 @@
+## mav_comm (kinetic) - 3.3.2-0
+
+The packages in the `mav_comm` repository were released into the `kinetic` distro by running `/usr/bin/bloom-release mav_comm --track kinetic --rosdistro kinetic --edit-track` on `Fri, 24 Aug 2018 09:40:06 -0000`
+
+These packages were released:
+- `mav_comm`
+- `mav_msgs`
+- `mav_planning_msgs`
+
+Version of package(s) in repository `mav_comm`:
+
+- upstream repository: https://github.com/ethz-asl/mav_comm.git
+- release repository: https://github.com/ethz-asl/mav_comm-release.git
+- rosdistro version: `3.3.1-0`
+- old version: `3.3.1-0`
+- new version: `3.3.2-0`
+
+Versions of tools used:
+
+- bloom version: `0.6.6`
+- catkin_pkg version: `0.4.8`
+- rosdep version: `0.12.2`
+- rosdistro version: `0.6.8`
+- vcstools version: `0.1.40`
+
+
 ## mav_comm (indigo) - 3.3.2-0
 
 The packages in the `mav_comm` repository were released into the `indigo` distro by running `/usr/bin/bloom-release mav_comm --track indigo --rosdistro indigo` on `Fri, 24 Aug 2018 09:32:50 -0000`
